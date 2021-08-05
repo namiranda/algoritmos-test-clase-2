@@ -26,19 +26,43 @@ public class Cine {
 
     public static double cantidadTotalRecaudada(List<Persona> personas){
         double cantidadTotal = 0;
-        //TODO -> implement me
+        for (Persona p: personas) {
+            if(p != null){
+                if(p.getEdad() <= 10){
+                    cantidadTotal += 100;
+                }else if(p.getEdad() <= 17){
+                    cantidadTotal += 150;
+                }else{
+                    cantidadTotal += 200;
+                }
+            }
+        }
         return cantidadTotal;
     }
 
     public static Integer cantidadPersonas(List<Persona> personas){
-        Integer cantidadPersonas = 0;
-        //TODO -> implement me
-        return cantidadPersonas;
+        int cantidad = 0;
+
+        for (Persona p: personas) {
+            if(p != null){
+                cantidad++;
+            }
+        };
+        return cantidad;
     }
 
     public static double promedioEdad(List<Persona> personas){
+        int sumaEdades = 0;
+        int cantidad = 0;
         double promedio = 0;
-        //TODO -> implement me
+        for (Persona p: personas) {
+            if(p != null){
+                sumaEdades += p.getEdad();
+                cantidad++;
+            }
+        };
+
+        promedio = (double) sumaEdades / cantidad;
         return promedio;
     }
 }

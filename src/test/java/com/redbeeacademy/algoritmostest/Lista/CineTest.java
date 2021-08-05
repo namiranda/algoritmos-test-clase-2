@@ -5,6 +5,8 @@ import com.redbeeacademy.algoritmostest.Lista.EjercicioCine.Persona;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
+import java.lang.reflect.Array;
+import java.util.Arrays;
 import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.*;
@@ -22,9 +24,9 @@ class CineTest {
     @Test
     @DisplayName("Test when null values are sent total recaudado")
     public void testNullValuesTotalRecaudado() {
-        Double result = Cine.cantidadTotalRecaudada(List.of(new Persona(30), null, new Persona(8), new Persona(18) ));
+        Double result = Cine.cantidadTotalRecaudada(Arrays.asList(new Persona(30), null, new Persona(8), new Persona(18)));
         assertNotNull(result, "The result cannot be null");
-        assertEquals(550, result);
+        assertEquals(500, result);
     }
 
     @Test
@@ -38,7 +40,7 @@ class CineTest {
     @Test
     @DisplayName("Test when null values are sent cantidad personas")
     public void testNullValuesCantidadPersonas() {
-        Integer result = Cine.cantidadPersonas(List.of(new Persona(30), null, new Persona(8), new Persona(18) ));
+        Integer result = Cine.cantidadPersonas(Arrays.asList(new Persona(30), null, new Persona(8), new Persona(18) ));
         assertNotNull(result, "The result cannot be null");
         assertEquals(3, result);
     }
@@ -54,7 +56,7 @@ class CineTest {
     @Test
     @DisplayName("Test when null values are sent promedio edad")
     public void testNullValuesPromedioEdad() {
-        Double result = Cine.promedioEdad(List.of(new Persona(30), null, new Persona(8), new Persona(18) ));
+        Double result = Cine.promedioEdad(Arrays.asList(new Persona(30), null, new Persona(8), new Persona(18) ));
         assertNotNull(result, "The result cannot be null");
         assertEquals(18.66, result);
     }

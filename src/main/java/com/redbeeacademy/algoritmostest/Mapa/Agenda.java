@@ -23,21 +23,19 @@ public class Agenda {
             new HashMap<>();
 
     public static void nuevoContacto(String nombre, int telefono){
-        //TODO -> implement me
+        miAgenda.put(nombre, telefono);
     }
 
     public static void modificarTelefono(String nombre, int telefono){
-        //TODO -> implement me
+        miAgenda.replace(nombre, telefono);
     }
 
     public static Integer obtenerTelefono(String nombre){
-        //TODO -> implement me
-        return null;
+        return miAgenda.get(nombre);
     }
 
     public static boolean eliminarTelefono(String nombre){
-        //TODO -> implement me
-        return false;
+        return miAgenda.remove(nombre) != null;
     }
 
     protected static List<Integer> miAgenda(){

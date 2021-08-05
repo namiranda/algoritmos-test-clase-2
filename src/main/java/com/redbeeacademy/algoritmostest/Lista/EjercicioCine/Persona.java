@@ -8,4 +8,8 @@ public class Persona extends ListaPersonas{
     public Persona(int edad) {
         this.edad = edad;
     }
+
+    public int getEdad(){
+        return edad;
+    }
 }
